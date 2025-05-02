@@ -1,9 +1,7 @@
 ```sh
 # start MySQL
-WORK_DIR="$HOME/.local/mysql"
 docker run --name db-mysql \
   -e MYSQL_ROOT_PASSWORD=root \
-  -v $WORK_DIR:/var/lib/mysql \
   -d -p 3306:3306 mysql
  
 docker exec -it db-mysql mysql -uroot -proot -e \
